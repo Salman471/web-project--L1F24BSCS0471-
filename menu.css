@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #2A1D12;
+  background-color: #C8792C;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #2A1D12;
+  padding: 10px 25px;
+}
+
+/* clearfix: floated logo and nav ko contain karta hai */
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  margin: 0;
+  line-height: 34px;
+  font-size: 26px;
+  color: #F4D9A0;
+}
+
+nav {
+  float: right;
+}
+
+/* nav pills */
+nav a {
+  display: inline-block;
+  color: #F4D9A0;
+  text-decoration: none;
+  padding: 5px 14px;
+  margin-left: 6px;
+  border-radius: 20px;
+  background-color: rgba(244, 217, 160, 0.2);
+}
+
+nav a:hover {
+  background-color: #C8792C;
+  color: #2A1D12;
+}
+
+/* dark contact pill */
+nav a.contact {
+  background-color: #140D07;
+  border: 1px solid #C8792C;
+}
+
+nav a.contact:hover {
+  background-color: #C8792C;
+  color: #2A1D12;
+}
+
+/* three-line button + vertical box */
+details {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+summary {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  color: #F4D9A0;
+  padding: 5px 14px;
+  margin-left: 6px;
+  border-radius: 20px;
+  background-color: rgba(244, 217, 160, 0.2);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 170px;
+  z-index: 20;
+  background-color: #2A1D12;
+  border: 2px solid #C8792C;
+  border-radius: 8px;
+}
+
+.dropdown a {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.dropdown a:hover {
+  background-color: #C8792C;
+  color: #2A1D12;
+}
+
+.box {
+  position: relative;
+  width: 90%;
+  max-width: 750px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 3px solid #2A1D12;
+  border-radius: 10px;
+  background-color: #FFF8E8;
+  overflow: hidden;
+}
+
+.box h2 {
+  color: #5B4632;
+}
+
+.box h3 {
+  color: #5B4632;
+  margin-bottom: 5px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2A1D12;
+  color: #F4D9A0;
+  padding: 3px 12px;
+  border-radius: 5px;
+}
+
+.deal-pic {
+  float: left;
+  width: 31%;
+  height: 150px;
+  object-fit: cover;
+  margin: 1%;
+  border: 3px solid #5B4632;
+  border-radius: 8px;
+}
+
+.deal-text {
+  clear: both;
+}
+
+video, audio, iframe {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+iframe {
+  height: 315px;
+  border: 0;
+}
+
+.specials {
+  height: 100px;
+  overflow: auto;
+  border: 2px solid #C8792C;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+th, td {
+  border: 1px solid #5B4632;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #5B4632;
+  color: #F4D9A0;
+}
+
+td + td {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #F4D9A0;
+}
+
+/* one picture per category, on the right side of the table */
+.menu-row {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.menu-row table {
+  width: 65%;
+}
+
+.cat-pic {
+  float: right;
+  width: 31%;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid #5B4632;
+  border-radius: 8px;
+}
+
+/* responsive: tablet and phone */
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
+
+  .logo, nav {
+    float: none;
+    text-align: center;
+  }
+
+  nav a, summary {
+    margin: 4px 3px;
+  }
+
+  .deal-pic {
+    width: 98%;
+    height: 180px;
+  }
+
+  iframe {
+    height: 240px;
+  }
+
+  th, td {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .menu-row table {
+    width: 100%;
+  }
+
+  .cat-pic {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 96%;
+    padding: 12px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
