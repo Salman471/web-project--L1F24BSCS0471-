@@ -16,8 +16,6 @@ header {
   background-color: #2A1D12;
   padding: 10px 25px;
 }
-
-/* clearfix: floated logo and nav ko contain karta hai */
 header::after {
   content: "";
   display: block;
@@ -35,8 +33,6 @@ header::after {
 nav {
   float: right;
 }
-
-/* nav pills */
 nav a {
   display: inline-block;
   color: #F4D9A0;
@@ -51,8 +47,6 @@ nav a:hover {
   background-color: #C8792C;
   color: #2A1D12;
 }
-
-/* dark contact pill */
 nav a.contact {
   background-color: #140D07;
   border: 1px solid #C8792C;
@@ -63,7 +57,6 @@ nav a.contact:hover {
   color: #2A1D12;
 }
 
-/* three-line button + vertical box */
 details {
   display: inline-block;
   position: relative;
@@ -197,7 +190,6 @@ tr:nth-child(even) {
   background-color: #F4D9A0;
 }
 
-/* one picture per category, on the right side of the table */
 .menu-row {
   overflow: hidden;
   margin-bottom: 10px;
@@ -216,7 +208,6 @@ tr:nth-child(even) {
   border-radius: 8px;
 }
 
-/* responsive: tablet and phone */
 @media (max-width: 768px) {
   header {
     position: static;
