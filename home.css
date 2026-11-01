@@ -13,7 +13,12 @@ h1, h2, h3 {
 header {
   background-color: #2A1D12;
   padding: 15px 25px;
-  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .logo {
@@ -30,16 +35,76 @@ nav {
 }
 
 nav a {
-  color: #d39a20;
+  display: inline-block;
+  color: #F4D9A0;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 1px;
-  line-height: 34px;
-  margin-left: 18px;
+  padding: 5px 14px;
+  margin-left: 6px;
+  border-radius: 20px;
+  background-color: rgba(244, 217, 160, 0.2);
 }
 
 nav a:hover {
-  color: #f5f3f0;
+  background-color: #F4D9A0;
+  color: #2A1D12;
+}
+
+nav a.contact {
+  background-color: #140D07;
+  border: 1px solid #C8792C;
+}
+
+nav a.contact:hover {
+  background-color: #C8792C;
+  color: #2A1D12;
+}
+
+details {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+summary {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  color: #F4D9A0;
+  font-size: 15px;
+  padding: 5px 14px;
+  margin-left: 6px;
+  border-radius: 20px;
+  background-color: rgba(244, 217, 160, 0.2);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 170px;
+  z-index: 20;
+  background-color: #2A1D12;
+  border: 2px solid #C8792C;
+  border-radius: 8px;
+}
+
+.dropdown a {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.dropdown a:hover {
+  background-color: #C8792C;
+  color: #2A1D12;
 }
 
 #bodyy {
@@ -120,7 +185,6 @@ nav a:hover {
 }
 
 .dish {
-  border-bottom: 2px ;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
@@ -144,4 +208,41 @@ footer {
 footer a {
   color: #F4D9A0;
   margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .logo, nav {
+    float: none;
+    text-align: center;
+  }
+
+  nav a, summary {
+    margin: 4px 3px;
+  }
+
+  #bodyy h1 {
+    font-size: 28px;
+  }
+
+  #bodyy img, .branch {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  #bodyy h1 {
+    font-size: 24px;
+  }
+
+  .serve {
+    width: 92%;
+  }
 }
