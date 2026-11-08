@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -35,8 +34,6 @@ header::after {
 nav {
   float: right;
 }
-
-/* nav: pills lift up on hover */
 nav a {
   display: inline-block;
   color: #F4D9A0;
@@ -115,8 +112,6 @@ summary::-webkit-details-marker {
   margin: 0 0 8px 0;
   font-size: 38px;
 }
-
-/* flexbox: wrap, justify, align, gap */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -139,8 +134,6 @@ summary::-webkit-details-marker {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* transform + transition on hover */
 .card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
@@ -156,8 +149,6 @@ summary::-webkit-details-marker {
 .card h3 {
   color: #5B4632;
 }
-
-/* margin-top: auto pushes every link to the bottom of its card */
 .card a {
   margin-top: auto;
   padding: 8px 20px;
